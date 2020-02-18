@@ -7,7 +7,7 @@ public class Admin {
     private String workphone;
     private int tier;
 
-    public Admin(String username, String password, String workphone, int tier) {
+    public Admin(String username, String password, String workphone) {
         Tier t = new Tier(tier);
         this.tier = tier;
         this.username = username;

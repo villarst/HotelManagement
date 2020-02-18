@@ -12,9 +12,8 @@ public class Customer {
     private String dob;
 
     public Customer(String name, String phoneNum, String email,
-                    int accountBalance, String username, String password,
-                    int roomNum, int tier, String dob) {
-        Tier t = new Tier(tier);
+                    int accountBalance, int tier, String username, String password,
+                    int roomNum, String dob) {
         Name = name;
         PhoneNum = phoneNum;
         Email = email;
@@ -24,6 +23,19 @@ public class Customer {
         this.roomNum = roomNum;
         this.tier = tier;
         this.dob = dob;
+        Tier t = new Tier(tier);
+    }
+
+    public Customer (){
+        Name = null;
+        PhoneNum = null;
+        Email = null;
+        this.accountBalance = 0;
+        this.username = null;
+        this.password = null;
+        this.roomNum = 0;
+        this.tier = 0;
+        this.dob = null;
     }
 
     public String resetAll(){
@@ -110,5 +122,12 @@ public class Customer {
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public String toString(){
+        System.out.println("Name: " + getName());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Tier: " + getTier());
+        return null;
     }
 }
